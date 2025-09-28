@@ -37,6 +37,7 @@ body {
 .section {
   min-height: 100vh;
   padding-top: 5rem; /* header height */
+  scroll-margin-top: 5rem;
 }
 
 .glass-effect {

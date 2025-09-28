@@ -14,7 +14,7 @@ export const works: WorkItem[] = [
   },
   {
     title: "SNS",
-    description: "Blazor Serverで開発した簡易的なSNSアプリ",
+    description: "Blazorで開発した簡易的なSNSアプリ",
     image: "https://placehold.co/600x400/0a0a0a/60a5fa?text=Ibasho",
     imageAlt: "Ibasho",
     href: "https://github.com/yuji-tsuzurano/Ibasho",
