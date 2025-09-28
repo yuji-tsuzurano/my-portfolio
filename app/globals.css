@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
+/* Always use dark scheme regardless of OS/browser preference */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Fallback to ensure dark even if CSS variables unsupported */
+html,
+body {
+  background-color: #0a0a0a;
+  color: #ededed;
 }
 
 body {
@@ -38,9 +40,20 @@ body {
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Make glass readable on browsers without backdrop-filter */
+@supports not (
+    (-webkit-backdrop-filter: blur(1px)) or
+    (backdrop-filter: blur(1px))
+  ) {
+  .glass-effect {
+    background: rgba(17, 24, 39, 0.85); /* slate-900-ish */
+    border-color: rgba(255, 255, 255, 0.08);
+  }
 }
 
 .active-nav {
