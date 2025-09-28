@@ -32,6 +32,7 @@
         .gradient-text {
             background: linear-gradient(to right, #34d399, #60a5fa);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         /* Scroll Animation */
@@ -41,7 +42,7 @@
             opacity: 0;
             transition: 1s all ease;
         }
-        .reveal.active {
+        .reveal.active {    
             transform: translateY(0);
             opacity: 1;
         }
@@ -196,7 +197,7 @@
                             <h3 class="font-bold text-center">React</h3>
                         </div>
                         <div class="w-36 h-36 flex flex-col items-center justify-center p-4 glass-effect rounded-lg hover:-translate-y-2 transition-transform duration-300">
-                            <i class="devicon-nextjs-original text-5xl text-white mb-2"></i>
+                            <i class="devicon-nextjs-plain  text-5xl text-white mb-2"></i>
                             <h3 class="font-bold text-center">Next.js</h3>
                         </div>
                         <div class="w-36 h-36 flex flex-col items-center justify-center p-4 glass-effect rounded-lg hover:-translate-y-2 transition-transform duration-300">
@@ -281,7 +282,7 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Work Item 1 -->
                     <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-                        <a href="https://github.com/yuji-tsuzurano/Ibasho" target="_blank" >
+                        <a href="https://github.com/yuji-tsuzurano/my-portfolio" target="_blank" >
 	                        <img src="https://placehold.co/600x400/0a0a0a/34d399?text=Portfolio" alt="Portfolio" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
 	                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-75 transition-all duration-300 flex flex-col justify-end p-6">
 	                            <h3 class="text-2xl font-bold transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">ポートフォリオサイト</h3>

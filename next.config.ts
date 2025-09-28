@@ -1,3 +1,6 @@
+/**
+ * Next.js 設定（静的エクスポート/GitHub Pages向け）
+ */
 import type { NextConfig } from "next";
 
 const repo = "my-portfolio";

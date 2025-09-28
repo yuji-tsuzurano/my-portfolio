@@ -1,6 +1,5 @@
+import { createReadStream, promises as fs } from "node:fs";
 import http from "node:http";
-import { promises as fs } from "node:fs";
-import { createReadStream } from "node:fs";
 import { extname, join, normalize } from "node:path";
 
 const outDir = join(process.cwd(), "out");
