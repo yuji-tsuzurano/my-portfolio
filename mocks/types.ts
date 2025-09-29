@@ -65,4 +65,6 @@ export interface WorkItem {
   image: string;
   imageAlt: string;
   href: string;
+  /** 技術タグ */
+  tags?: string[];
 }
