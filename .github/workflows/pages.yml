@@ -2,8 +2,9 @@ name: Deploy Pages (Monthly JST)
 
 on:
   schedule:
-    # JST 1日0時 = UTC 前日15:00 -> day-of-month 1, hour 15 UTC
-    - cron: '0 15 1 * *'
+    # Runs at 00:00 JST on the 1st of every month
+    - cron: '0 0 1 * *'
+      timezone: 'Asia/Tokyo'
   workflow_dispatch:
 
 permissions:
