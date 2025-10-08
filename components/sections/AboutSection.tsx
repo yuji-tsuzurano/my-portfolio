@@ -65,7 +65,7 @@ export default function AboutSection() {
 
         <div className="relative max-w-3xl mx-auto pl-8">
           <div className="absolute left-3 top-1 h-full border-l-2 border-gray-700/50" />
-          {experiences.map((e, i) => {
+          {experiences.map((e) => {
             const dur =
               e.endYM === "present"
                 ? diffYearsMonths(e.startYM as YearMonth)
@@ -86,23 +86,45 @@ export default function AboutSection() {
                 key={`${e.company}-${e.startYM}-${e.endYM}`}
                 className="mb-12 relative"
                 once
-                delayMs={i * 120}
               >
                 <div
                   className={`absolute left-[-2.1rem] top-1 w-6 h-6 rounded-full border-4 border-[#0a0a0a] shadow ${
                     e.color === "teal" ? "bg-teal-500" : "bg-blue-500"
                   }`}
                 />
-                <div className="p-6 glass-effect rounded-lg">
+                <div className="p-6 glass-effect rounded-lg relative">
+                  {e.badges && e.badges.length > 0 && (
+                    <div className="absolute right-4 top-2 z-20 flex flex-row items-center gap-1">
+                      {e.badges.map((badge) => (
+                        <span
+                          key={badge}
+                          className="inline-block rounded-full px-3 py-1 text-xs shadow-md select-none border border-blue-400/60 bg-blue-400/10"
+                        >
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <p
-                    className={`text-sm font-semibold ${e.color === "teal" ? "text-teal-400" : "text-blue-400"}`}
+                    className={`text-md font-semibold ${e.color === "teal" ? "text-teal-400" : "text-blue-400"}`}
                   >
                     {periodStr}
                   </p>
                   <h4 className="text-xl font-bold mt-1">{e.company}</h4>
-                  <p className="text-md text-slate-300 mt-1">{e.role}</p>
-                  <p className="text-sm text-slate-300">{e.stack}</p>
+                  <p className="text-lg text-slate-300 mt-1">{e.role}</p>
                   <p className="text-slate-400 mt-2">{e.details}</p>
+                  {e.stack && e.stack.length > 0 && (
+                    <div className="flex flex-wrap gap-2 my-2 z-10 relative">
+                      {e.stack.map((t) => (
+                        <span
+                          key={t}
+                          className="inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-0.5 text-xs"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </Reveal>
             );

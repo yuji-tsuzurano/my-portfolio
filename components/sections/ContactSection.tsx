@@ -13,12 +13,12 @@ export default function ContactSection() {
             <span className="gradient-text">Contact</span>
           </h2>
         </Reveal>
-        <Reveal once delayMs={120}>
+        <Reveal once>
           <p className="text-center text-slate-300 mb-12 max-w-2xl mx-auto">
             {site.contactMessage}
           </p>
         </Reveal>
-        <Reveal once delayMs={240}>
+        <Reveal once>
           <div className="flex justify-center space-x-6">
             {site.socials.map((s) => (
               <a

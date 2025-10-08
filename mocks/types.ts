@@ -36,7 +36,8 @@ export interface About {
 export interface Experience {
   company: string;
   role: string;
-  stack: string;
+  badges: string[];
+  stack: string[];
   details: string;
   color: "teal" | "blue";
   /** 期間開始（YYYY-MM） */

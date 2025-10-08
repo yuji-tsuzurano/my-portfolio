@@ -15,8 +15,8 @@ export default function WorksSection() {
           </h2>
         </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          {works.map((w, idx) => (
-            <Reveal key={w.href} once delayMs={idx * 120}>
+          {works.map((w) => (
+            <Reveal key={w.href} once>
               <div className="group works-card h-full flex flex-col overflow-hidden rounded-lg glass-effect hover:-translate-y-1 transition-transform duration-300">
                 <div className="relative">
                   <div className="relative aspect-video">
@@ -38,7 +38,7 @@ export default function WorksSection() {
                       {w.tags.map((t) => (
                         <span
                           key={t}
-                          className="works-tag inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-0.5 text-xs text-emerald-300"
+                          className="works-tag inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-0.5 text-xs"
                         >
                           {t}
                         </span>

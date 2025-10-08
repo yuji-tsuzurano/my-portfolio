@@ -14,8 +14,8 @@ export default function SkillsSection() {
           </h2>
         </Reveal>
 
-        {skillCategories.map((cat, idx) => (
-          <Reveal key={cat.title} className="mb-16" once delayMs={idx * 120}>
+        {skillCategories.map((cat) => (
+          <Reveal key={cat.title} className="mb-16" once>
             <h3
               className={`text-2xl font-bold text-slate-200 mb-6 pl-4 border-l-4 ${cat.borderColorClass}`}
             >
