@@ -9,14 +9,14 @@ export default function WorksSection() {
   return (
     <section id="works" className="section container mx-auto px-6 py-20">
       <div>
-        <Reveal once>
+        <Reveal>
           <h2 className="text-4xl font-bold text-center mb-12">
             <span className="gradient-text">Works</span>
           </h2>
         </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {works.map((w) => (
-            <Reveal key={w.href} once>
+            <Reveal key={w.href}>
               <div className="group works-card h-full flex flex-col overflow-hidden rounded-lg glass-effect hover:-translate-y-1 transition-transform duration-300">
                 <div className="relative">
                   <div className="relative aspect-video">
@@ -25,7 +25,7 @@ export default function WorksSection() {
                       alt={w.imageAlt}
                       fill
                       unoptimized
-                      className="works-img object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="works-img object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
                     />
                   </div>
                 </div>

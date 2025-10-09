@@ -8,17 +8,17 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section container mx-auto px-6 py-20">
       <div>
-        <Reveal once>
+        <Reveal>
           <h2 className="text-4xl font-bold text-center mb-4">
             <span className="gradient-text">Contact</span>
           </h2>
         </Reveal>
-        <Reveal once>
+        <Reveal>
           <p className="text-center text-slate-300 mb-12 max-w-2xl mx-auto">
             {site.contactMessage}
           </p>
         </Reveal>
-        <Reveal once>
+        <Reveal>
           <div className="flex justify-center space-x-6">
             {site.socials.map((s) => (
               <a

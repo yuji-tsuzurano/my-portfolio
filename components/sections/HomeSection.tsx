@@ -15,7 +15,7 @@ export default function HomeSection() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-900 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob" />
         <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-900 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
       </div>
-      <Reveal className="z-10" once>
+      <Reveal className="z-10">
         <h1 className="text-5xl md:text-7xl font-black uppercase mb-4">
           <span className="gradient-text">{site.heroName}</span>
         </h1>

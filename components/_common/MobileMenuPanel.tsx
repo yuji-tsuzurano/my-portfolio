@@ -1,11 +1,13 @@
 "use client";
-
 import { useMobileMenu } from "./MobileMenuProvider";
 
+// ナビゲーションリンクの型
 type NavLink = { href: string; label: string };
 
 export function MobileMenuPanel({ navLinks }: { navLinks: NavLink[] }) {
+  // モバイルメニューの開閉状態
   const { open, setOpen } = useMobileMenu();
+  // メニューを閉じる
   const onLinkClick = () => setOpen(false);
   return (
     <div id="mobile-menu" className={`${open ? "" : "hidden"} md:hidden`}>

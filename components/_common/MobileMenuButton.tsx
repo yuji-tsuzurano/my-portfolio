@@ -1,8 +1,8 @@
 "use client";
-
 import { useMobileMenu } from "./MobileMenuProvider";
 
 export function MobileMenuButton() {
+  // モバイルメニューの開閉状態
   const { open, setOpen } = useMobileMenu();
   return (
     <button

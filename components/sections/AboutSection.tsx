@@ -15,13 +15,13 @@ export default function AboutSection() {
   return (
     <section id="about" className="section container mx-auto px-6 py-20">
       <div>
-        <Reveal once>
+        <Reveal>
           <h2 className="text-4xl font-bold text-center mb-4">
             <span className="gradient-text">About Me</span>
           </h2>
         </Reveal>
 
-        <Reveal className="text-center mb-12" once>
+        <Reveal className="text-center mb-12">
           <h3 className="text-3xl font-bold">
             {about.nameJP}
             <span className="text-lg ml-2 text-slate-400">
@@ -46,18 +46,18 @@ export default function AboutSection() {
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mb-20">
           <div className="w-full lg:w-2/3 space-y-6">
-            <Reveal className="p-6 glass-effect rounded-lg" once>
+            <Reveal className="p-6 glass-effect rounded-lg">
               <h4 className="text-xl font-bold gradient-text">プロフィール</h4>
               <p className="text-slate-300 mt-2">{about.profileText}</p>
             </Reveal>
-            <Reveal className="p-6 glass-effect rounded-lg" once>
+            <Reveal className="p-6 glass-effect rounded-lg">
               <h4 className="text-xl font-bold gradient-text">開発への想い</h4>
               <p className="text-slate-300 mt-2">{about.passionText}</p>
             </Reveal>
           </div>
         </div>
 
-        <Reveal once>
+        <Reveal>
           <h3 className="text-3xl font-bold text-center mb-12 gradient-text">
             経歴
           </h3>
@@ -97,7 +97,6 @@ export default function AboutSection() {
               <Reveal
                 key={`${e.company}-${e.startYM}-${e.endYM}`}
                 className="mb-12 relative"
-                once
               >
                 <div
                   className={`absolute left-[-2.1rem] top-1 w-6 h-6 rounded-full border-4 border-[#0a0a0a] shadow ${
