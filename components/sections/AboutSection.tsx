@@ -77,10 +77,22 @@ export default function AboutSection() {
               if (months === 0) return `${years}年`;
               return `${years}年${months}か月`;
             })();
-            const periodStr =
-              e.endYM === "present"
-                ? `${formatYMJP(e.startYM as YearMonth)} - 現在（${durationJp}）`
-                : `${formatYMJP(e.startYM as YearMonth)} - ${formatYMJP(e.endYM as YearMonth)}（${durationJp}）`;
+            const periodStr = (() => {
+              const startDate = formatYMJP(e.startYM as YearMonth);
+              if (e.endYM === "present") {
+                return (
+                  <span>
+                    {startDate} - 現在（{durationJp}）
+                  </span>
+                );
+              }
+              return (
+                <span>
+                  {startDate} - {formatYMJP(e.endYM as YearMonth)}
+                  <span className="block sm:inline">（{durationJp}）</span>
+                </span>
+              );
+            })();
             return (
               <Reveal
                 key={`${e.company}-${e.startYM}-${e.endYM}`}
@@ -105,6 +117,8 @@ export default function AboutSection() {
                       ))}
                     </div>
                   )}
+                  {/* スマホ時のみbadgesとperiodStrの間に余白 */}
+                  <div className="block sm:hidden h-7" />
                   <p
                     className={`text-md font-semibold ${e.color === "teal" ? "text-teal-400" : "text-blue-400"}`}
                   >
